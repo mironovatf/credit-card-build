@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+  />
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        form {
+            padding: 2em;
+            display: flex;
+            flex-direction: column;
+             
+           
+
+        }
+
+        label {
+            display: inline-block;
+            width: 110px;
+            vertical-align: top;
+            padding-top: 0.5em;
+            padding-bottom: 0.5em;
+        }
+
+        input[type="text"], input[type="number"], input[type="month"], input[type="tel"] {
+            padding: 0.8em;
+            font: inherit;
+            border: 1px solid grey;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        div {
+            padding: 4px;
+        }
+
+        input[type=submit] {
+            margin-top: 4%;
+            position: relative;
+            left: 43%;
+            transform: translateX(-50%);
+            width: 80%;
+            border: 0;
+            border-radius: 3px;
+            background: green;
+            color: #fff;
+            font-weight: 400;
+            font: inherit;
+            padding: 1em;
+            -webkit-font-smoothing: antialiased;
+            cursor: pointer;
+        }
+
+        img {
+            max-width:100%;
+            width: 80px;
+            margin: 1px;
+        }
+        .visa-image {
+            width: 127px;
+        }
+
+        .name {
+            width: 220px;
+        }
+        .cvv {
+            width: 80px;
+        }
+        .card_number {
+            width: 380px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>Confirm purchase</h1>
+
+    <form action="http://kevin.dowd.yoobee.net.nz/form/all.php" method="GET">
+
+        <div class="row">
+            <div>
+                <label for="name">Owner</label>
+                <input type="text" name="name" class="name" placeholder=" NAME SURNAME">
+                <span class="message"></span>
+            </div>
+
+            <div>
+                <label for="cvv">CVV</label>
+                <input type="tel" name="CVV" class="cvv" placeholder="***">
+                <span class="message"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="card">Card number</label>
+                <br/>
+                <input type="number" name="card_number" class="card_number" placeholder="**** **** **** ****">
+                <span class="message"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <label for="">Expiration date</label>
+                <br/>
+                <input type="month" id="start" name="start" min="2019-10" value="2019-10">
+                <span class="message"></span>
+            </div>
+
+            <div class="responsive_img">
+                    <img class="visa-image" src="" alt="">
+                    <img class="master-image" src="" alt="">
+                    <img class="amex-image" src="" alt="">
+            </div>
+
+        </div>
+
+
+        <input type="submit" value="Confirm">
+
+    </form>
+
+ 
+ <script src="./script.js"></script>
+
+ 
+
+</html>
